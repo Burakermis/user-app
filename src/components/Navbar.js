@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Navbar() {
-  const title = this.props;
+  const title = "User App";
   return (
     <div>
       <h3>{title}</h3>

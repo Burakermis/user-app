@@ -3,11 +3,11 @@ import Navbar from './components/Navbar'
 import Users from './components/Users'
 import {render} from '@testing-library/react'
 
-class App extends Component() {
+class App extends Component {
   render() {
     return(
       <div className="container">
-        <Navbar title = "User App"></Navbar>
+        <Navbar />
         <hr />
         <Users />
       </div>
