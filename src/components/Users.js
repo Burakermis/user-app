@@ -4,25 +4,25 @@ import UserConsumer from '../context'
 
 class Users extends Component {
   render() {
-    return(
+    return (
       <UserConsumer>
         {
           value => {
-            const {users} = value;
+            const { users } = value;
             return (
               <div>
                 {
-                    users.map(user => {
-                        return(
-                            <User 
-                                key = {user.id}
-                                id = {user.id}
-                                name = {user.name}
-                                salary = {user.salary}
-                                department = {user.department}
-                            />
-                        )
-                    })
+                  users.map(user => {
+                    return (
+                      <User
+                        key={user.id}
+                        id={user.id}
+                        name={user.name}
+                        salary={user.salary}
+                        department={user.department}
+                      />
+                    )
+                  })
                 }
               </div>
             )
