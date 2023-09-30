@@ -9,6 +9,11 @@ const reducer = (state, action) => {
         ...state, // spread operator 
         users: state.users.filter(user => action.payload !== user.id)
       }
+    case "ADD_USER":
+      return {
+        ...state, // spread operator 
+        users: [...state.users,action.payload]
+      }
     default:
       return state
   }
@@ -18,13 +23,13 @@ export class UserProvider extends Component {
   state = {
     users: [
       {
-        id: 1,
+        id: "unique-1",
         name: "Hüseyin Ermiş",
         salary: "12000",
         department: "Finans"
       },
       {
-        id: 2,
+        id: "unique-2",
         name: "Burak Ermiş",
         salary: "10000",
         department: "Bilişim"
